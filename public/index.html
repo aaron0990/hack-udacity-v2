@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>PoseNet - Camera Feed Demo</title>
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load Posenet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-wrapper" style="background: #e53935">
+        <a href="#!" class="brand-logo left" style="text-transform: uppercase; padding-left: 0.4em;">boxing helper</a>
+        <ul class="left hide-on-med-and-down"></ul>
+    </div>
+</nav>
+
+
+<div class="main">
+
+<div>
+
+</div>
+    <div style="padding-bottom: 2%; padding-top: 2%">
+        TRY TO IMITATE
+    </div>
+    <div class="container-webcam red lighten-1">
+        <video id="video"  class="responsive-video" width="45%" height="45%" style="position: center; transform: rotateY(180deg)"></video>
+        <img id="img1" src="/images/images.jpg" width="45%" height="45%">
+    </div>
+    <div style="padding: 2%">
+    <button id="startbutton" class="waves-effect red lighten-1 waves-light btn">Take photo</button>
+    </div>
+    <canvas id="canvas" style="transform: rotateY(180deg)"></canvas>
+    <div id="container-photo" class="container-webcam red lighten-1">
+        <img id="photo" style="display: none">
+    </div>
+
+</div>
+
+
+
+<script src="getImageData.js"></script>
+<script src="video.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
